@@ -1,4 +1,4 @@
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import "./App.css";
 import Button, {
   FancyButton,
@@ -18,9 +18,17 @@ const theme = {
   },
 };
 
+const GlobalStyle = createGlobalStyle`
+  button {
+    font-family: 'Segoi UI'; 
+  }
+`;
+
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
+
       <div className="App">
         <Button dataQa="button-default">Styled Button</Button>
 
