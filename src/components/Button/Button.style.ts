@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface Props {
   variant?: string;
@@ -36,3 +36,17 @@ export const SubmitButton = styled(StyledButton).attrs({
   type: "submit",
   "data-qa": "submit-button",
 })``;
+
+const Rotate = keyframes`
+0% {
+  transform: rotate(0);
+}
+
+100% {
+  transform: rotate(360deg);
+}
+`;
+
+export const AnimatedButton = styled(StyledButton)`
+  animation: ${Rotate} 5s ease-in-out infinite;
+`;

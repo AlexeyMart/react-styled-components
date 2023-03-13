@@ -1,5 +1,9 @@
 import "./App.css";
-import Button, { FancyButton, SubmitButton } from "./components/Button/Button";
+import Button, {
+  FancyButton,
+  SubmitButton,
+  AnimatedButton,
+} from "./components/Button/Button";
 
 export default function App() {
   return (
@@ -12,6 +16,8 @@ export default function App() {
       <FancyButton as="a">Fancy Button</FancyButton>
 
       <SubmitButton>Submit Button</SubmitButton>
+
+      <AnimatedButton>Animated</AnimatedButton>
     </div>
   );
 }
